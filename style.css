@@ -1,0 +1,196 @@
+/* Aura Health & Medical Center - shared styles */
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(22, 114, 184, 0.12);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(22, 114, 184, 0.24);
+    }
+}
+
+.glow-card {
+    animation: pulseGlow 4s infinite ease-in-out;
+}
+
+body {
+    background: #fff;
+    color: #17324b;
+}
+
+.bg-slate-900,
+.bg-slate-950,
+[class*="bg-slate-900/"],
+[class*="bg-slate-950/"] {
+    background-color: #f5f9fd !important;
+}
+
+.bg-slate-800,
+[class*="bg-slate-800/"] {
+    background-color: #fff !important;
+}
+
+.bg-slate-700 {
+    background-color: #eaf2f8 !important;
+}
+
+.text-white {
+    color: #17324b !important;
+}
+
+.bg-blue-800.text-white,
+.bg-blue-700.text-white,
+.bg-gradient-to-r.text-white,
+.bg-gradient-to-tr .text-white,
+[class*="bg-blue-700"] .text-white,
+[class*="bg-medical-teal"].text-white {
+    color: #fff !important;
+}
+
+.text-medical-teal,
+.text-medical-blue {
+    color: #1769aa !important;
+}
+
+.bg-medical-teal,
+.bg-emerald-600 {
+    background-color: #1769aa !important;
+}
+
+.bg-gradient-to-r,
+.bg-gradient-to-tr {
+    background-image: linear-gradient(120deg, #1672b8, #2458a6) !important;
+}
+
+[class*="border-slate-700"],
+[class*="border-slate-750"],
+[class*="border-slate-800"] {
+    border-color: #dbe7f0 !important;
+}
+
+.text-slate-200,
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-slate-600 {
+    color: #526a80 !important;
+}
+
+.skip-link {
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+    z-index: 100;
+    border-radius: .5rem;
+    background: #fff;
+    padding: .75rem 1rem;
+    color: #174f84;
+    box-shadow: 0 2px 12px rgba(23, 50, 75, .15);
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    border-radius: .5rem;
+    padding: .55rem .8rem;
+    color: #405b72;
+    transition: background-color .2s, color .2s;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #eff6fc;
+    color: #1769aa;
+}
+
+.mobile-nav-link {
+    display: block;
+    width: 100%;
+    border-radius: .4rem;
+    padding: .55rem .75rem;
+    color: #405b72;
+}
+
+.mobile-nav-link:hover {
+    background: #eff6fc;
+    color: #1769aa;
+}
+
+.footer-link {
+    color: inherit;
+}
+
+.footer-link:hover {
+    color: #1769aa;
+}
+
+.form-label {
+    display: block;
+    color: #526a80;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    margin-top: .35rem;
+    border: 1px solid #d5e2ed;
+    border-radius: .65rem;
+    background: #fff;
+    padding: .7rem .85rem;
+    color: #17324b;
+    font-size: .9rem;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.form-control:focus {
+    outline: 2px solid #8fc2e8;
+    outline-offset: 1px;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eff6fc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9ab8d0;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1769aa;
+}
+
+#app-container {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
