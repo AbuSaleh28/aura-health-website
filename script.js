@@ -6,8 +6,6 @@ const doctorsData = [
         specialty: "Cardiology & Vascular Surgery",
         department: "Cardiology",
         experience: "18+ Years Experience",
-        rating: 4.9,
-        reviews: 142,
         image: "images/doctor-ayesha.jpg",
         fallbackImage: "images/doctor-ayesha.jpg",
         bio: "Consultant cardiologist specializing in minimally invasive valve procedures and advanced coronary care."
@@ -17,8 +15,6 @@ const doctorsData = [
         specialty: "Neurology & Neurosurgery",
         department: "Neurology",
         experience: "22+ Years Experience",
-        rating: 4.9,
-        reviews: 198,
         image: "images/doctor-hamza.jpg",
         fallbackImage: "images/doctor-hamza.jpg",
         bio: "Consultant neurologist focused on stroke care, epilepsy treatment, and complex neurological conditions."
@@ -28,8 +24,6 @@ const doctorsData = [
         specialty: "Pediatrics & Neonatology",
         department: "Pediatrics",
         experience: "14+ Years Experience",
-        rating: 4.8,
-        reviews: 110,
         image: "images/doctor-fatima.jpg",
         fallbackImage: "images/doctor-fatima.jpg",
         bio: "Consultant paediatrician providing childhood wellness, developmental care, and newborn support."
@@ -39,8 +33,6 @@ const doctorsData = [
         specialty: "Oncology & Cancer Care",
         department: "Oncology",
         experience: "20+ Years Experience",
-        rating: 5.0,
-        reviews: 215,
         image: "images/doctor-usman.jpg",
         fallbackImage: "images/doctor-usman.jpg",
         bio: "Consultant medical oncologist specializing in evidence-based cancer treatment and supportive care."
@@ -50,8 +42,6 @@ const doctorsData = [
         specialty: "Orthopedic & Joint Surgery",
         department: "Orthopedics",
         experience: "16+ Years Experience",
-        rating: 4.9,
-        reviews: 164,
         image: "images/doctor-zainab.jpg",
         fallbackImage: "images/doctor-zainab.jpg",
         bio: "Orthopaedic surgeon specializing in joint replacement, sports injuries, and mobility restoration."
@@ -61,8 +51,6 @@ const doctorsData = [
         specialty: "Advanced Diagnostics & Radiology",
         department: "Diagnostics",
         experience: "15+ Years Experience",
-        rating: 4.8,
-        reviews: 89,
         image: "images/doctor-bilal.jpg",
         fallbackImage: "images/doctor-bilal.jpg",
         bio: "Consultant radiologist specializing in MRI, CT, and diagnostic imaging."
@@ -170,20 +158,20 @@ function renderPage(pageId) {
 function renderHomePage() {
     return `
         <!-- Hero Section -->
-        <section class="relative overflow-hidden py-20 lg:py-28 bg-gradient-to-b from-slate-900 via-slate-850 to-slate-900 border-b border-slate-800">
+        <section class="home-hero relative overflow-hidden py-20 lg:py-28 bg-gradient-to-b from-slate-900 via-slate-850 to-slate-900 border-b border-slate-800">
             <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0d9488_1px,transparent_1px)] [background-size:16px_16px]"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <div class="lg:col-span-7 space-y-6">
                         <div class="inline-flex items-center space-x-2 bg-medical-teal/10 border border-medical-teal/30 px-3 py-1.5 rounded-full text-medical-teal text-xs font-semibold tracking-wide uppercase">
                             <i class="fa-solid fa-award"></i>
-                            <span>Ranked #1 Regional Medical Center 2026</span>
+                            <span>Trusted care in Islamabad</span>
                         </div>
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
-                            Advanced Medicine. <br><span class="bg-gradient-to-r from-medical-teal via-emerald-400 to-medical-blue bg-clip-text text-transparent">Compassionate Healing.</span>
+                            Care, closer to home. <br><span class="bg-gradient-to-r from-medical-teal via-emerald-400 to-medical-blue bg-clip-text text-transparent">Here in Islamabad.</span>
                         </h1>
                         <p class="text-slate-300 text-lg leading-relaxed max-w-2xl">
-                            Aura Health & Medical Center combines world-class clinical expertise, cutting-edge surgical robotics, and personalized patient care to redefine healthcare standards.
+                            Find experienced specialists, diagnostic services and thoughtful support in one welcoming place.
                         </p>
                         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
                             <button onclick="openAppointmentModal()" class="bg-gradient-to-r from-medical-teal to-emerald-600 hover:from-teal-600 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-teal-900/40 transition flex items-center justify-center space-x-2">
@@ -198,16 +186,16 @@ function renderHomePage() {
 
                         <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-800">
                             <div>
-                                <h4 class="text-3xl font-black text-white">99.8%</h4>
-                                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Patient Satisfaction</p>
-                            </div>
-                            <div>
-                                <h4 class="text-3xl font-black text-white">45+</h4>
-                                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Medical Specialists</p>
+                                <h4 class="text-3xl font-black text-white">6</h4>
+                                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Specialist Departments</p>
                             </div>
                             <div>
                                 <h4 class="text-3xl font-black text-white">24/7</h4>
-                                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Trauma & ICU Care</p>
+                                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Emergency Support</p>
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-black text-white">One</h4>
+                                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Connected Care Team</p>
                             </div>
                         </div>
                     </div>
@@ -219,10 +207,10 @@ function renderHomePage() {
                                 <div class="p-6 space-y-4">
                                     <div class="flex items-center justify-between">
                                         <span class="text-xs font-bold text-medical-teal uppercase tracking-wider bg-medical-teal/10 px-3 py-1 rounded-full">Excellence in Care</span>
-                                        <span class="text-xs text-slate-400"><i class="fa-solid fa-shield-halved text-medical-teal mr-1"></i> JCI Accredited</span>
+                                        <span class="text-xs text-slate-400"><i class="fa-solid fa-location-dot text-medical-teal mr-1"></i> Islamabad, Pakistan</span>
                                     </div>
-                                    <h3 class="text-xl font-bold text-white">State-of-the-Art Clinical Campus</h3>
-                                    <p class="text-slate-400 text-sm">Equipped with next-generation robotic surgery suites, 3T MRI diagnostics, and dedicated intensive care units.</p>
+                                    <h3 class="text-xl font-bold text-white">Care, all in one place</h3>
+                                    <p class="text-slate-400 text-sm">From your first consultation to ongoing care, our teams help you find the right next step.</p>
                                 </div>
                             </div>
                         </div>
@@ -441,11 +429,7 @@ function renderDoctorsList(list) {
             <div>
                 <div class="relative h-64 overflow-hidden bg-slate-900">
                     <img src="${doc.image}" alt="Portrait of ${doc.name}" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" loading="lazy" onerror="this.onerror=null;this.src='${doc.fallbackImage}'">
-                    <div class="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-medical-teal border border-slate-700 flex items-center space-x-1">
-                        <i class="fa-solid fa-star text-amber-400"></i>
-                        <span>${doc.rating} (${doc.reviews})</span>
-                    </div>
-                </div>
+                        </div>
                 <div class="p-6 space-y-3">
                     <span class="text-xs font-semibold uppercase tracking-wider text-medical-teal bg-medical-teal/10 px-2.5 py-1 rounded-md inline-block">${doc.specialty}</span>
                     <h3 class="text-xl font-bold text-white">${doc.name}</h3>
@@ -576,23 +560,23 @@ function renderAboutPage() {
 
                 <!-- Accreditations / Stats -->
                 <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-10 text-center space-y-8">
-                    <h3 class="text-2xl font-bold text-white">Accreditations & Quality Standards</h3>
+                    <h3 class="text-2xl font-bold text-white">The principles behind your care</h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                         <div>
-                            <div class="text-4xl font-black text-medical-teal mb-1">JCI</div>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider">Gold Seal Accredited</p>
+                            <div class="text-4xl font-black text-medical-teal mb-1">People</div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider">Patient-first care</p>
                         </div>
                         <div>
-                            <div class="text-4xl font-black text-medical-teal mb-1">Magnet</div>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider">Nursing Excellence</p>
+                            <div class="text-4xl font-black text-medical-teal mb-1">Evidence</div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider">Thoughtful decisions</p>
                         </div>
                         <div>
-                            <div class="text-4xl font-black text-medical-teal mb-1">Level 1</div>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider">Trauma Center Status</p>
+                            <div class="text-4xl font-black text-medical-teal mb-1">Support</div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider">Here when you need us</p>
                         </div>
                         <div>
-                            <div class="text-4xl font-black text-medical-teal mb-1">Top 100</div>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider">Hospitals Nationwide</p>
+                            <div class="text-4xl font-black text-medical-teal mb-1">Islamabad</div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider">Rooted in our community</p>
                         </div>
                     </div>
                 </div>

@@ -1,159 +1,37 @@
-/* Aura Health & Medical Center - shared styles */
+/* Aura Health — a calm, editorial visual system */
 
-@keyframes pulseGlow {
-    0%, 100% {
-        box-shadow: 0 0 15px rgba(22, 114, 184, 0.12);
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(22, 114, 184, 0.24);
-    }
+:root {
+    --ink: #17364b;
+    --ink-soft: #34566d;
+    --muted: #627788;
+    --blue: #176f91;
+    --blue-deep: #124e68;
+    --blue-pale: #eaf3f5;
+    --paper: #f7f8f6;
+    --white: #fff;
+    --line: #dce5e6;
+    --shadow-card: 0 12px 30px rgba(24, 53, 68, .07);
 }
 
-.glow-card {
-    animation: pulseGlow 4s infinite ease-in-out;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #fff;
-    color: #17324b;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-.bg-slate-900,
-.bg-slate-950,
-[class*="bg-slate-900/"],
-[class*="bg-slate-950/"] {
-    background-color: #f5f9fd !important;
-}
-
-.bg-slate-800,
-[class*="bg-slate-800/"] {
-    background-color: #fff !important;
-}
-
-.bg-slate-700 {
-    background-color: #eaf2f8 !important;
-}
-
-.text-white {
-    color: #17324b !important;
-}
-
-.bg-blue-800.text-white,
-.bg-blue-700.text-white,
-.bg-gradient-to-r.text-white,
-.bg-gradient-to-tr .text-white,
-[class*="bg-blue-700"] .text-white,
-[class*="bg-medical-teal"].text-white {
-    color: #fff !important;
-}
-
-.text-medical-teal,
-.text-medical-blue {
-    color: #1769aa !important;
-}
-
-.bg-medical-teal,
-.bg-emerald-600 {
-    background-color: #1769aa !important;
-}
-
-.bg-gradient-to-r,
-.bg-gradient-to-tr {
-    background-image: linear-gradient(120deg, #1672b8, #2458a6) !important;
-}
-
-[class*="border-slate-700"],
-[class*="border-slate-750"],
-[class*="border-slate-800"] {
-    border-color: #dbe7f0 !important;
-}
-
-.text-slate-200,
-.text-slate-300,
-.text-slate-400,
-.text-slate-500,
-.text-slate-600 {
-    color: #526a80 !important;
-}
-
-.skip-link {
-    position: absolute;
-    top: -4rem;
-    left: 1rem;
-    z-index: 100;
-    border-radius: .5rem;
-    background: #fff;
-    padding: .75rem 1rem;
-    color: #174f84;
-    box-shadow: 0 2px 12px rgba(23, 50, 75, .15);
-}
-
-.skip-link:focus {
-    top: 1rem;
-}
-
-.nav-btn {
-    display: inline-flex;
-    align-items: center;
-    border-radius: .5rem;
-    padding: .55rem .8rem;
-    color: #405b72;
-    transition: background-color .2s, color .2s;
-}
-
-.nav-btn:hover,
-.nav-btn.active {
-    background: #eff6fc;
-    color: #1769aa;
-}
-
-.mobile-nav-link {
-    display: block;
-    width: 100%;
-    border-radius: .4rem;
-    padding: .55rem .75rem;
-    color: #405b72;
-}
-
-.mobile-nav-link:hover {
-    background: #eff6fc;
-    color: #1769aa;
-}
-
-.footer-link {
-    color: inherit;
-}
-
-.footer-link:hover {
-    color: #1769aa;
-}
-
-.form-label {
-    display: block;
-    color: #526a80;
-    font-size: .75rem;
-    font-weight: 600;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    margin-top: .35rem;
-    border: 1px solid #d5e2ed;
-    border-radius: .65rem;
-    background: #fff;
-    padding: .7rem .85rem;
-    color: #17324b;
-    font-size: .9rem;
-    letter-spacing: normal;
-    text-transform: none;
-}
-
-.form-control:focus {
-    outline: 2px solid #8fc2e8;
-    outline-offset: 1px;
+::selection {
+    background: #c8e4e9;
+    color: var(--ink);
 }
 
 button,
@@ -161,36 +39,610 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+button {
+    cursor: pointer;
 }
 
-::-webkit-scrollbar-track {
-    background: #eff6fc;
+/* Preserve the light clinical palette across the legacy Tailwind templates. */
+.bg-slate-900,
+.bg-slate-950,
+[class*="bg-slate-900/"],
+[class*="bg-slate-950/"] {
+    background-color: var(--paper) !important;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #9ab8d0;
-    border-radius: 4px;
+.bg-slate-800,
+[class*="bg-slate-800/"] {
+    background-color: var(--white) !important;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #1769aa;
+.bg-slate-700 {
+    background-color: #edf2f2 !important;
+}
+
+.bg-medical-teal,
+.bg-emerald-600 {
+    background-color: var(--blue) !important;
+}
+
+.text-medical-teal,
+.text-medical-blue {
+    color: var(--blue) !important;
+}
+
+.text-slate-200,
+.text-slate-300 {
+    color: var(--ink-soft) !important;
+}
+
+.text-slate-400,
+.text-slate-500,
+.text-slate-600 {
+    color: var(--muted) !important;
+}
+
+.text-white {
+    color: var(--ink) !important;
+}
+
+.bg-blue-800.text-white,
+.bg-blue-700.text-white,
+.bg-blue-700 .text-white,
+.bg-medical-teal.text-white,
+.bg-medical-teal .text-white,
+.bg-emerald-600.text-white,
+.bg-emerald-600 .text-white,
+.bg-gradient-to-r.text-white,
+.bg-gradient-to-tr .text-white,
+.home-hero .text-white {
+    color: #fff !important;
+}
+
+[class*="border-slate-700"],
+[class*="border-slate-750"],
+[class*="border-slate-800"] {
+    border-color: var(--line) !important;
+}
+
+.bg-gradient-to-r,
+.bg-gradient-to-tr {
+    background-image: linear-gradient(125deg, var(--blue), var(--blue-deep)) !important;
+}
+
+/* Emergency strip and shared navigation */
+body > div.bg-blue-800 {
+    background: var(--blue-deep) !important;
+    letter-spacing: .01em;
+}
+
+body > div.bg-blue-800 > div {
+    min-height: 38px;
+}
+
+body > div.bg-blue-800 a {
+    text-decoration: none;
+}
+
+body > div.bg-blue-800 a:hover {
+    text-decoration: underline;
+}
+
+header.bg-white {
+    border-color: rgba(23, 54, 75, .09) !important;
+    box-shadow: 0 4px 18px rgba(23, 54, 75, .035) !important;
+}
+
+header > div > div {
+    min-height: 78px !important;
+}
+
+header a[aria-label="Aura Health home"] > span:first-child,
+footer a > span:first-child {
+    border-radius: 12px !important;
+    box-shadow: none !important;
+}
+
+.nav-btn {
+    position: relative;
+    border-radius: 5px;
+    padding: .65rem .8rem;
+    color: var(--ink-soft);
+    font-size: .84rem;
+    transition: color .18s ease, background .18s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #edf4f5;
+    color: var(--blue-deep);
+}
+
+.nav-btn.active::after {
+    position: absolute;
+    right: .8rem;
+    bottom: .28rem;
+    left: .8rem;
+    height: 2px;
+    background: var(--blue);
+    content: "";
+}
+
+.mobile-nav-link {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+    padding: .72rem .8rem;
+    color: var(--ink-soft);
+}
+
+.mobile-nav-link:hover {
+    background: #edf4f5;
+    color: var(--blue-deep);
+}
+
+header button,
+#app-container button,
+#appointment-modal button {
+    transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+header button[class*="bg-blue-700"],
+#app-container button[class*="bg-medical-teal"],
+#app-container button[class*="bg-gradient-to-r"],
+#appointment-modal button[type="submit"] {
+    border: 0;
+    border-radius: 7px !important;
+    background: var(--blue-deep) !important;
+    box-shadow: 0 5px 12px rgba(18, 78, 104, .15) !important;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+header button[class*="bg-blue-700"]:hover,
+#app-container button[class*="bg-medical-teal"]:hover,
+#app-container button[class*="bg-gradient-to-r"]:hover,
+#appointment-modal button[type="submit"]:hover {
+    background: #0e4056 !important;
+    box-shadow: 0 7px 16px rgba(18, 78, 104, .2) !important;
+    transform: translateY(-1px);
+}
+
+/* Page headings */
+#app-container h1,
+#app-container h2,
+#app-container h3,
+#app-container h4 {
+    color: var(--ink);
+    letter-spacing: -.025em;
+}
+
+#app-container h1,
+#app-container h2 {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+}
+
+#app-container [class*="text-center"] > h1:first-child,
+#app-container [class*="text-center"] > h2:first-child,
+#app-container [class*="text-center"] > h3:first-child {
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    color: var(--blue);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+#app-container [class*="text-center"] > h2:nth-child(2),
+#app-container [class*="text-center"] > h3:nth-child(2) {
+    color: var(--ink);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(2rem, 3.5vw, 2.85rem);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: 1.12;
+}
+
+#app-container p {
+    line-height: 1.72;
+}
+
+/* Home page: deep, calm hero with a clear typographic hierarchy. */
+.home-hero {
+    overflow: hidden;
+    background: #123c50 !important;
+    border: 0 !important;
+    color: #fff;
+}
+
+.home-hero::before {
+    position: absolute;
+    top: -11rem;
+    right: 24%;
+    width: 35rem;
+    height: 35rem;
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.home-hero::after {
+    position: absolute;
+    top: -5rem;
+    right: 31%;
+    width: 23rem;
+    height: 23rem;
+    border: 1px solid rgba(255, 255, 255, .07);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.home-hero h1 {
+    max-width: 760px;
+    color: #fff !important;
+    font-family: "DM Serif Display", Georgia, serif !important;
+    font-size: clamp(2.8rem, 5.3vw, 4.65rem) !important;
+    font-weight: 400 !important;
+    letter-spacing: -.045em !important;
+    line-height: 1.04 !important;
+}
+
+.home-hero h1 span {
+    background: none !important;
+    color: #b7dce0 !important;
+}
+
+.home-hero p,
+.home-hero .text-slate-300,
+.home-hero .text-slate-400 {
+    color: rgba(255, 255, 255, .76) !important;
+}
+
+.home-hero .inline-flex {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: #b7dce0 !important;
+    letter-spacing: .13em;
+}
+
+.home-hero .grid.grid-cols-3 {
+    max-width: 570px;
+    border-color: rgba(255, 255, 255, .2) !important;
+}
+
+.home-hero .grid.grid-cols-3 h4 {
+    color: #fff !important;
+    font-size: 1.8rem !important;
+    font-weight: 500 !important;
+}
+
+.home-hero .grid.grid-cols-3 p {
+    color: rgba(255, 255, 255, .68) !important;
+    font-size: .68rem;
+    line-height: 1.4;
+}
+
+.home-hero .bg-slate-800 {
+    border: 0 !important;
+    border-radius: 10px !important;
+    background: #fff !important;
+    box-shadow: 0 24px 55px rgba(0, 0, 0, .22);
+}
+
+.home-hero .bg-slate-800 h3 {
+    color: var(--ink) !important;
+}
+
+.home-hero .bg-slate-800 p {
+    color: var(--muted) !important;
+}
+
+.home-hero button.bg-slate-800,
+.home-hero button.bg-slate-800 .text-white {
+    color: var(--ink) !important;
+}
+
+.home-hero button.bg-slate-800:hover {
+    background: #e7f0f1 !important;
+}
+
+.home-hero img {
+    height: 350px !important;
+}
+
+/* Department cards */
+#app-container[data-page="departments"] > div,
+#app-container[data-page="doctors"] > div,
+#app-container[data-page="about"] > div,
+#app-container[data-page="contact"] > div {
+    background: var(--paper) !important;
+}
+
+#app-container[data-page="departments"] #cardiology,
+#app-container[data-page="departments"] #neurology,
+#app-container[data-page="departments"] #pediatrics,
+#app-container[data-page="departments"] #oncology,
+#app-container[data-page="departments"] #orthopedics,
+#app-container[data-page="departments"] #diagnostics {
+    gap: clamp(1.5rem, 3vw, 3rem);
+    border: 1px solid var(--line) !important;
+    border-radius: 12px !important;
+    box-shadow: var(--shadow-card) !important;
+}
+
+#app-container[data-page="departments"] #cardiology .w-16,
+#app-container[data-page="departments"] #neurology .w-16,
+#app-container[data-page="departments"] #pediatrics .w-16,
+#app-container[data-page="departments"] #oncology .w-16,
+#app-container[data-page="departments"] #orthopedics .w-16,
+#app-container[data-page="departments"] #diagnostics .w-16 {
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: var(--blue-pale) !important;
+}
+
+#app-container[data-page="departments"] #cardiology .lg\:col-span-7,
+#app-container[data-page="departments"] #neurology .lg\:col-span-7,
+#app-container[data-page="departments"] #pediatrics .lg\:col-span-7,
+#app-container[data-page="departments"] #oncology .lg\:col-span-7,
+#app-container[data-page="departments"] #orthopedics .lg\:col-span-7,
+#app-container[data-page="departments"] #diagnostics .lg\:col-span-7 {
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: #f4f7f7 !important;
+}
+
+#app-container[data-page="departments"] .lg\:col-span-7 .grid > div {
+    border: 1px solid var(--line) !important;
+    border-radius: 6px !important;
+    background: #fff !important;
+}
+
+#app-container[data-page="departments"] .lg\:col-span-5 .p-4 {
+    border: 0 !important;
+    border-left: 3px solid #8bbcc2 !important;
+    border-radius: 0 !important;
+    background: #f4f7f7 !important;
+}
+
+/* Doctor directory */
+#app-container[data-page="doctors"] #doctors-grid > div {
+    overflow: hidden;
+    border: 1px solid var(--line) !important;
+    border-radius: 10px !important;
+    background: #fff !important;
+    box-shadow: 0 7px 24px rgba(24, 53, 68, .055) !important;
+}
+
+#app-container[data-page="doctors"] #doctors-grid > div:hover {
+    border-color: #afcbd0 !important;
+    box-shadow: 0 16px 34px rgba(24, 53, 68, .1) !important;
+    transform: translateY(-3px);
+}
+
+#app-container[data-page="doctors"] #doctors-grid > div > div:first-child > div:first-child {
+    height: 300px !important;
+    background: #edf2f1 !important;
+}
+
+#app-container[data-page="doctors"] #doctors-grid img {
+    object-position: center 30%;
+    transition: transform .45s ease;
+}
+
+#app-container[data-page="doctors"] #doctors-grid > div:hover img {
+    transform: scale(1.025);
+}
+
+#app-container[data-page="doctors"] #doctors-grid h3 {
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    font-size: 1.12rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+}
+
+#app-container[data-page="doctors"] #doctors-grid .bg-medical-teal\/10 {
+    border-radius: 3px !important;
+    background: var(--blue-pale) !important;
+    color: var(--blue-deep) !important;
+    letter-spacing: .08em;
+}
+
+#app-container[data-page="doctors"] #doctors-grid .absolute.top-4 {
+    border: 1px solid rgba(255, 255, 255, .75) !important;
+    border-radius: 5px !important;
+    background: rgba(255, 255, 255, .94) !important;
+    color: var(--ink) !important;
+}
+
+#app-container[data-page="doctors"] #doctors-grid button {
+    border-radius: 6px !important;
+    background: #fff !important;
+}
+
+#app-container[data-page="doctors"] > div > div > div.bg-slate-800 {
+    border: 1px solid var(--line) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 6px 20px rgba(24, 53, 68, .04) !important;
+}
+
+#doctor-search-input,
+#department-filter {
+    min-height: 48px;
+    border: 1px solid #cedbdd !important;
+    border-radius: 6px !important;
+    background-color: #fff !important;
+    color: var(--ink) !important;
+}
+
+#doctor-search-input::placeholder {
+    color: #8a9ba4 !important;
+}
+
+/* Editorial details for the remaining pages */
+#app-container[data-page="about"] .bg-slate-800,
+#app-container[data-page="about"] [class*="bg-slate-800/"] {
+    border: 1px solid var(--line) !important;
+    border-radius: 10px !important;
+    box-shadow: var(--shadow-card) !important;
+}
+
+#app-container[data-page="about"] .text-4xl {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+}
+
+#app-container[data-page="contact"] form,
+#app-container[data-page="contact"] .bg-slate-800,
+#app-container[data-page="patient-portal"] .bg-slate-800 {
+    border: 1px solid var(--line) !important;
+    border-radius: 10px !important;
+    box-shadow: var(--shadow-card) !important;
+}
+
+#app-container[data-page="contact"] input,
+#app-container[data-page="contact"] textarea,
+#app-container[data-page="patient-portal"] input {
+    border-radius: 6px !important;
+    background: #fff !important;
+    color: var(--ink) !important;
+}
+
+/* Shared booking dialog and form controls */
+#appointment-modal {
+    background: rgba(17, 39, 51, .62) !important;
+}
+
+#appointment-modal > div {
+    border: 0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .2) !important;
+}
+
+#appointment-modal > div > div:first-child {
+    background: #f1f6f5 !important;
+}
+
+.form-label {
+    color: var(--ink-soft);
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .055em;
+    text-transform: uppercase;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    margin-top: .4rem;
+    border: 1px solid #cedbdd;
+    border-radius: 6px;
+    background: #fff;
+    padding: .78rem .85rem;
+    color: var(--ink);
+    font-family: inherit;
+    font-size: .92rem;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.form-control:focus,
+#doctor-search-input:focus,
+#department-filter:focus {
+    outline: 3px solid rgba(23, 111, 145, .16) !important;
+    border-color: var(--blue) !important;
+}
+
+/* Footer */
+footer.bg-blue-50 {
+    border-top: 1px solid var(--line) !important;
+    background: #eef3f1 !important;
+}
+
+footer h2 {
+    font-size: .85rem;
+    letter-spacing: .02em;
+}
+
+.footer-link {
+    color: var(--muted);
+    transition: color .18s ease;
+}
+
+.footer-link:hover {
+    color: var(--blue-deep);
+}
+
+/* Accessibility and subtle motion */
+.skip-link {
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+    z-index: 100;
+    border-radius: 5px;
+    background: #fff;
+    padding: .75rem 1rem;
+    color: var(--blue-deep);
+    box-shadow: var(--shadow-card);
+}
+
+.skip-link:focus {
+    top: 1rem;
 }
 
 #app-container {
-    animation: fadeIn 0.3s ease-out forwards;
+    animation: page-enter .35s ease-out both;
 }
 
-@keyframes fadeIn {
+@keyframes page-enter {
     from {
-        opacity: 0;
-        transform: translateY(6px);
+        opacity: .7;
+        transform: translateY(5px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    header > div > div {
+        min-height: 68px !important;
+    }
+
+    .home-hero {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
+
+    .home-hero h1 {
+        font-size: clamp(2.55rem, 12vw, 3.4rem) !important;
+    }
+
+    .home-hero .grid.grid-cols-3 {
+        gap: .75rem !important;
+    }
+
+    .home-hero .grid.grid-cols-3 h4 {
+        font-size: 1.45rem !important;
+    }
+
+    #app-container[data-page="doctors"] #doctors-grid > div > div:first-child > div:first-child {
+        height: 270px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
     }
 }
